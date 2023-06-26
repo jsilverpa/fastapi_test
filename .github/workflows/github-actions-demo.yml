@@ -5,7 +5,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ${{ matrix.os}}
     strategy:
-      os: [ubuntu-18.04, ubuntu-18.03]
+      matrix:
+        os: [ubuntu-18.04, ubuntu-18.03]
     steps:
       - run: echo " Starting my ubuntu ${{matrix.os}}"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
